@@ -18,7 +18,7 @@ const Top = () => {
                     <GitHubButton className="ml-12" href="https://github.com/BonyChops/matchlist" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star BonyChops/matchlist on GitHub" data-size='large'>Star</GitHubButton>
                     <br />
                     <div className='w-64 hover:bg-green-300 bg-green-500 mx-auto rounded-full py-4 text-black mt-8 cursor-pointer' onClick={() => {
-                        global.location.href = "/api/login/spotify";
+                        global.location.href = "/api/login/spotify" + (allowPrivate ? '/private' : '');
                     }}>
                         <span className="inline-flex w-auto items-center">
                             Login with {<img src={spotifyIcon} width="30px" className='ml-2' />}
